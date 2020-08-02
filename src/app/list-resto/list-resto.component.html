@@ -4,8 +4,11 @@
       <tr>
         <th scope="col">#</th>
         <th scope="col">Name</th>
-        <th scope="col">Email</th>
-        <th scope="col">Address</th>
+        <th scope="col">category</th>
+        <th scope="col">brand</th>
+        <th scope="col">desc</th>
+        <th scope="col">price</th>
+        <th scope="col">Image</th>
         <th scope="col">Action</th>
       </tr>
     </thead>
@@ -13,11 +16,15 @@
       <tr *ngFor="let item of collection">
         <th scope="row">{{item.id}}</th>
         <td>{{item.name}}</td>
-        <td>{{item.email}}</td>
-        <td>{{item.address}}</td>
+        <td>{{item.category}}</td>
+        <td>{{item.brand}}</td>
+        <td>{{item.desc}}</td>
+        <td>{{item.price}}</td>
+        <td><img src="{{item.imgpath}}" width="200px" height="200px" ></td>
         <td>
           <i (click)=deleteResto(item.id) class="fa fa-trash" style="font-size:30px;color:red;"></i>
-          <a routerLink="/update/{{item.id}}"><i class="fa fa-edit" style="font-size:30px;color:red;"></i></a>
+          <a [routerLink]="['/add', item.id]" class="btn btn-info btn-sm">Edit</a>
+          <a [routerLink]="['/show', item.id]" class="btn btn-info btn-sm">Show</a>
         </td>
       </tr>
       

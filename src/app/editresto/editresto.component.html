@@ -1,0 +1,29 @@
+<h1 class="bg-danger text-white text-center">{{pageTitle}}</h1>
+
+
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-8">
+            <form [formGroup]="blogForm"  (ngSubmit)="onSubmit()">
+
+
+               Name: <input type="text" formControlName="name"  class="form-control"><br>
+               Category: <input type="text" name="category" formControlName="category"  class="form-control"><br>
+               Brand:<input type="text" name="brand" formControlName="brand"  class="form-control"><br>
+               Desc: <input type="text" name="desc" formControlName="desc"  class="form-control"><br>
+               Price :<input type="text" name="price" formControlName="price"  class="form-control"><br>
+               <input type="file" id="image" (change)="onSelectedFile($event)" />
+
+                <input type="hidden" formControlName="id">
+
+
+               <button class="btn btn-primary mr-2" [disabled]="!blogForm.valid" type="submit">Save</button>
+            </form>
+
+           
+
+        </div>
+    </div>
+</div>  

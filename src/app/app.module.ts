@@ -10,6 +10,9 @@ import { RegisterComponent } from './register/register.component';
 import { ListRestoComponent } from './list-resto/list-resto.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
+import { EditrestoComponent } from './editresto/editresto.component';
+import { ShowrestoComponent } from './showresto/showresto.component';
+import { ShowComponent } from './show/show.component';
 
 
 
@@ -20,7 +23,10 @@ import { ReactiveFormsModule } from '@angular/forms';
     UpdateRestoComponent,
     LoginComponent,
     RegisterComponent,
-    ListRestoComponent
+    ListRestoComponent,
+    EditrestoComponent,
+    ShowrestoComponent,
+    ShowComponent
   ],
   imports: [
     BrowserModule,
